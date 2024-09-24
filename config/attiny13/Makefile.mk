@@ -1,0 +1,4 @@
+MCU = attiny13
+F_CPU = 9600000
+AVRARCH = avr25
+FUSES =

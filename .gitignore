@@ -1,0 +1,8 @@
+*.o
+*.elf
+*.hex
+*.asm
+*.bin
+tracelist*.txt
+*.vcd
+*.gtkw
