@@ -40,8 +40,8 @@ $(FIRMWARENAME).elf: $(OBJECTS)
 %.o: %.S
 	$(CC) $(CFLAGS) -x assembler-with-cpp -c -o $@ $<
 
-fuses:
-	echo $(DUDE) $(DUDEFLAGS) -e $(FUSES)
+fuse:
+	$(DUDE) $(DUDEFLAGS) -e $(FUSES)
 
 flash:
 	$(DUDE) $(DUDEFLAGS) -Uflash:w:$(FIRMWARENAME).hex:i
