@@ -28,7 +28,7 @@ all: $(FIRMWARENAME).hex $(FIRMWARENAME).bin $(FIRMWARENAME).asm
 	$(OBJCOPY) $(OBJFLAGS) -O binary $< $@
 
 $(FIRMWARENAME).asm: $(FIRMWARENAME).hex
-	avr-objdump --no-show-raw-insn -m$(AVRARCH) -D -S $(FIRMWARENAME).hex > $@
+	avr-objdump --no-show-raw-insn $(OBJFLAGS) -m$(AVRARCH) -D -S $(FIRMWARENAME).elf > $@
 
 $(FIRMWARENAME).elf: $(OBJECTS)
 	$(CC) $(CFLAGS) -o $@ $^
